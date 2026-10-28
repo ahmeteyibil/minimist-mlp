@@ -1,0 +1,28 @@
+{
+  "deney1": {
+    "mimari": "784-512-256-128-10 (ReLU)",
+    "optimizer": "Adam (lr=1e-3)",
+    "epochs": 15,
+    "batch": 64,
+    "train_loss_son": 0.016612839731252754,
+    "val_loss_son": 0.09904409445228521,
+    "train_acc_son": 0.99494,
+    "val_acc_son": 0.9796,
+    "test_loss": 0.10146913536228222,
+    "test_acc": 0.9788,
+    "egitim_suresi_sn": 223.14
+  },
+  "deney2": {
+    "mimari": "784-256-128-10 (ReLU)",
+    "optimizer": "SGD momentum=0.9 (lr=0.01)",
+    "epochs": 15,
+    "batch": 64,
+    "train_loss_son": 0.0009351801025541499,
+    "val_loss_son": 0.08511002311920747,
+    "train_acc_son": 1.0,
+    "val_acc_son": 0.9797,
+    "test_loss": 0.07368121284130902,
+    "test_acc": 0.9805,
+    "egitim_suresi_sn": 210.14
+  }
+}
