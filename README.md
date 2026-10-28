@@ -1,0 +1,6 @@
+Deney karşılaştırması. İki model de test verisinde %97'nin üzerinde doğruluk elde etmiştir. Adam optimizer, SGD'ye kıyasla daha hızlı yakınsamış ve biraz daha yüksek val accuracy vermiştir. SGD'de kayıp eğrisi daha dalgalıdır; momentum kullanılmasına rağmen Adam kadar kararlı değildir. Model daha derin oldukça (Deney 1) train/val arasındaki farkın bir miktar açıldığı görülmektedir; bu hafif overfitting işaretidir. Dropout veya weight decay eklenerek azaltılabilir.
+
+Kendi el yazım üzerindeki başarı. Kendi numaramı oluşturan rakamları MNIST formatına (beyaz rakam/siyah zemin, 28×28, normalize) dönüştürdüğümde model doğru tahminler üretmiştir. Ancak bazı rakamlarda (özellikle kalın uçlu kalemle yazılan 1 ve 7) güven skoru MNIST test setine göre düşmüştür. Bunun nedeni distribution shifttir: MNIST'teki yazı stili, kalınlığı ve merkezleme standardı benim yazımdan farklıdır. Bu, eğitim verisi ile gerçek dünya verisi arasındaki dağılım farkının model performansını nasıl etkilediğini göstermektedir. Görüntüleri merkezleyip normalize ederek ve rakamın etrafına MNIST benzeri boşluk bırakarak bu fark azaltılabilir.
+
+Kısıtlar. CNN kullanılmamıştır; MLP'nin konumdan bağımsız öğrenmesi nedeniyle çevrilmiş/ölçeklenmiş rakamlarda performans düşer. Bu ödev kapsamında amaç mimariyi anlamak olduğu için bu davranış beklenmektedir.
+
